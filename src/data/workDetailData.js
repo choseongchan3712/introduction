@@ -125,7 +125,7 @@ export const workList = {
       "2. 시간 계산에 유용한 라이브러리: Moment.js",
       "3. 수학적 계산을 도와주는 라이브러리: math.js",
     ],
-    guthub: "https://github.com/choseongchan3712/portfolio-calculate-app",
+    github: "https://github.com/choseongchan3712/portfolio-calculate-app",
     cons: "/계산기구조.png",
   },
   document: {
@@ -163,7 +163,7 @@ export const workList = {
       "1. 워드 파일 작성 라이브러리: Doxc.js",
       "2. Doxc.js로 작성한 워드 파일을 쉽게 내려받을 수 있게 도와주는 라이브러리: file-saver",
     ],
-    guthub:
+    github:
       "https://github.com/choseongchan3712/portfolio-document-writing-app",
     cons: "/문서구조.png",
   },
@@ -198,7 +198,7 @@ export const workList = {
       "MUI 컴포넌트 라이브러리와 Motion 라이브러리를 중첩해서 사용하는 것이 매우 복잡했다. 해결 방법: 각 라이브러리의 공식사이트를 검색하여 사용법을 학습하여 사용함.",
     ],
     tip: ["유용한 UI라이브러리: MUI", "유용한 모션 라이브러리: Motion"],
-    guthub: "https://github.com/choseongchan3712/portfolio-to-do-list-app",
+    github: "https://github.com/choseongchan3712/portfolio-to-do-list-app",
     cons: "/투두구조.png",
   },
   law: {
@@ -236,7 +236,7 @@ export const workList = {
       "유용한 리액트 디자인 툴: MUI",
       "ip 찾기: https://law-server-fwx3.onrender.com/ip",
     ],
-    guthub: "https://github.com/choseongchan3712/portfolio-legal-search-app",
+    github: "https://github.com/choseongchan3712/portfolio-legal-search-app",
     cons: "/법률구조.png",
   },
 };

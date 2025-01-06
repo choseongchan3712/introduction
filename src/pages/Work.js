@@ -22,7 +22,7 @@ const images = [
     rotation: [0, Math.PI / 2.5, 0],
     url: "/계산기.png",
     text:"올인원계산기 미니포트폴리오 보기",
-    link:"caculator"
+    link:"calculator"
   },
   // Right
   {
