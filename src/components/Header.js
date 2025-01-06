@@ -76,10 +76,9 @@ const Header = () => {
           <Link
             to={"/work"}
             style={{
-              color:
-                location.pathname === "/work"
-                  ? "var(--point-light)"
-                  : "var(--font-color)",
+              color: location.pathname.includes("/work")
+                ? "var(--point-light)"
+                : "var(--font-color)",
             }}
           >
             작업물
