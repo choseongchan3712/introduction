@@ -15,7 +15,9 @@
     "styled-components": "^6.1.13",
     "styled-reset": "^4.5.2",
     "three": "^0.172.0",
-    "vivus": "^0.4.6"
+    "uuid-by-string": "^4.0.0",
+    "vivus": "^0.4.6",
+    "wouter": "^3.3.5"
   },
   "scripts": {
     "start": "react-scripts start",

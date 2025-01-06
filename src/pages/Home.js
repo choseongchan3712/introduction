@@ -4,7 +4,6 @@ import Title from "../components/Title";
 import MenuList from "../components/MenuList";
 import { Link } from "react-router-dom";
 import MainThree from "../components/MainThree";
-import { Suspense } from "react";
 
 const Container = styled.div`
   width: 100%;
@@ -45,6 +44,9 @@ const Home = () => {
             </MenuList>
             <MenuList delay={"4s"}>
               <Link to={"/blog"}>블로그</Link>
+            </MenuList>
+            <MenuList delay={"5s"}>
+              <Link to={"/study"}>공부기록</Link>
             </MenuList>
           </div>
         </div>
