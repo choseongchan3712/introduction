@@ -44,6 +44,7 @@ export const workList = {
     ],
     github:
       "https://github.com/choseongchan3712/portfolio-justice-bridge-intranet",
+    cons: "/인트라넷구조.png",
   },
   login: {
     img: "/로그인.png",
@@ -85,6 +86,7 @@ export const workList = {
       "3. 서버 배포 도구: Render",
     ],
     github: "https://github.com/choseongchan3712/portfolio-login-project",
+    cons: "/로그인구조.png",
   },
   calculator: {
     img: "/계산기.png",
@@ -124,6 +126,7 @@ export const workList = {
       "3. 수학적 계산을 도와주는 라이브러리: math.js",
     ],
     guthub: "https://github.com/choseongchan3712/portfolio-calculate-app",
+    cons: "/계산기구조.png",
   },
   document: {
     img: "/문서.png",
@@ -162,6 +165,7 @@ export const workList = {
     ],
     guthub:
       "https://github.com/choseongchan3712/portfolio-document-writing-app",
+    cons: "/문서구조.png",
   },
   todo: {
     img: "/투두.png",
@@ -195,6 +199,7 @@ export const workList = {
     ],
     tip: ["유용한 UI라이브러리: MUI", "유용한 모션 라이브러리: Motion"],
     guthub: "https://github.com/choseongchan3712/portfolio-to-do-list-app",
+    cons: "/투두구조.png",
   },
   law: {
     img: "/법률.png",
@@ -232,5 +237,6 @@ export const workList = {
       "ip 찾기: https://law-server-fwx3.onrender.com/ip",
     ],
     guthub: "https://github.com/choseongchan3712/portfolio-legal-search-app",
+    cons: "/법률구조.png",
   },
 };
