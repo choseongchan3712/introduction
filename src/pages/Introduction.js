@@ -263,7 +263,8 @@ const Container = styled.div`
       .title {
         display: flex;
         justify-content: flex-end;
-        text-align: right;
+        font-size: 40px;
+        line-height: 1.3;
       }
       .bold_box {
         width: 50%;
@@ -620,10 +621,7 @@ const Introduction = () => {
             </div>
           </div>
           <Title>
-            깃허브 및<br />
-            블로그
-            <br />
-            주소
+            깃허브 및<br />블로그 주소
           </Title>
         </div>
       </div>

@@ -15,7 +15,7 @@ const Container = styled.div`
   background-color: var(--main-color);
   overflow: hidden;
   @media screen and (max-width: 1850px) {
-    padding: 100vh 20px 20px 20px;
+    padding: 100px 20px 20px 20px;
   }
   .wrap {
     width: 100%;

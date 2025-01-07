@@ -6,6 +6,7 @@ import "aos/dist/aos.css";
 import Aos from "aos";
 import StudyBox from "../components/StudyBox";
 import { useScrollTop } from "../lib/useScrollTop";
+import Loading from "../components/Loading";
 
 const Container = styled.div`
   position: relative;
@@ -16,6 +17,7 @@ const Container = styled.div`
   background-color: var(--main-color);
   padding: 100vh 15% 200px 15%;
   .text_wrap {
+    padding-top: 30px;
     position: absolute;
     top: 0;
     left: 0;
@@ -55,23 +57,23 @@ const Study = () => {
 
   return (
     <Container>
-      <div className="text_wrap" data-aos="fade-up">
-        {res ? (
-          <StudyThree
-            wordList={res?.map((data) => data.name)}
-            to={res?.map((data) => data.url)}
-          />
-        ) : (
-          "loading"
-        )}
-      </div>
-      <div className="git_wrap">
-        {res
-          ? res.map((data, index) => (
+      {res ? (
+        <>
+          <div className="text_wrap" data-aos="fade-up">
+            <StudyThree
+              wordList={res?.map((data) => data.name)}
+              to={res?.map((data) => data.url)}
+            />
+          </div>
+          <div className="git_wrap">
+            {res.map((data, index) => (
               <StudyBox key={index} name={data.name} url={data.url} />
-            ))
-          : "loading"}
-      </div>
+            ))}
+          </div>
+        </>
+      ) : (
+        <Loading />
+      )}
     </Container>
   );
 };
