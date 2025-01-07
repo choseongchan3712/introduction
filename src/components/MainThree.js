@@ -16,7 +16,7 @@ const Container = styled.div`
 const Model = () => {
   const group = useRef();
   const light = useRef();
-  const { nodes } = useGLTF("/graces-draco.glb");
+  const { nodes } = useGLTF(`${process.env.PUBLIC_URL}/graces-draco.glb`);
   console.log(nodes);
   useFrame((state, delta) => {
     easing.dampE(

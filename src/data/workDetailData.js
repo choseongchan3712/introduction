@@ -1,6 +1,6 @@
 export const workList = {
   intranet: {
-    img: "/인트라넷.png",
+    img: `${process.env.PUBLIC_URL}/인트라넷.png`,
     url: "https://choseongchan3712.github.io/portfolio-justice-bridge-intranet/",
     title: "justice-bridge-intranet",
     purpose: [
@@ -47,7 +47,7 @@ export const workList = {
     cons: "/인트라넷구조.png",
   },
   login: {
-    img: "/로그인.png",
+    img: `${process.env.PUBLIC_URL}/로그인.png`,
     url: "https://choseongchan3712.github.io/portfolio-login-project/",
     title: "로그인 프로젝트",
     purpose: [
@@ -89,7 +89,7 @@ export const workList = {
     cons: "/로그인구조.png",
   },
   calculator: {
-    img: "/계산기.png",
+    img: `${process.env.PUBLIC_URL}/계산기.png`,
     url: "https://choseongchan3712.github.io/portfolio-calculate-app/",
     title: "올인원 계산기",
     purpose: [
@@ -129,7 +129,7 @@ export const workList = {
     cons: "/계산기구조.png",
   },
   document: {
-    img: "/문서.png",
+    img: `${process.env.PUBLIC_URL}/문서.png`,
     url: "https://choseongchan3712.github.io/portfolio-document-writing-app/",
     title: "로폼(law-form)",
     purpose: [
@@ -168,7 +168,7 @@ export const workList = {
     cons: "/문서구조.png",
   },
   todo: {
-    img: "/투두.png",
+    img: `${process.env.PUBLIC_URL}/투두.png`,
     url: "https://choseongchan3712.github.io/portfolio-to-do-list-app/",
     title: "할일목록",
     purpose: [
@@ -202,7 +202,7 @@ export const workList = {
     cons: "/투두구조.png",
   },
   law: {
-    img: "/법률.png",
+    img: `${process.env.PUBLIC_URL}/법률.png`,
     url: "https://choseongchan3712.github.io/portfolio-legal-search-app/",
     title: "법령DB",
     purpose: [
