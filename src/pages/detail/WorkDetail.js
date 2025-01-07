@@ -7,6 +7,7 @@ import Aos from "aos";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 import { useScrollTop } from "../../lib/useScrollTop";
+import PageTitle from "../../components/PageTitle";
 
 const Container = styled.div`
   width: 100%;
@@ -110,173 +111,176 @@ const WorkDetail = () => {
   useScrollTop();
 
   return (
-    <Container>
-      <div className="contents">
-        <div className="wrap" data-aos="fade-up">
-          <div className="title" data-aos="fade-right" data-aos-delay="900">
-            제목
-          </div>
-          <div className="detail" data-aos="fade-right" data-aos-delay="900">
-            {workList[pageName]?.title}
-          </div>
-        </div>
-      </div>
-
-      <div className="contents">
-        <div className="wrap" data-aos="fade-up">
-          <div className="title" data-aos="fade-right" data-aos-delay="900">
-            바로가기
-          </div>
-          <div className="detail" data-aos="fade-right" data-aos-delay="900">
-            <img src={workList[pageName]?.img} alt="detail_img" />
-          </div>
-          <div className="detail" data-aos="fade-right" data-aos-delay="900">
-            <a
-              href={workList[pageName]?.url}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              주소: {workList[pageName]?.url}
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <div className="contents">
-        <div className="wrap" data-aos="fade-up">
-          <div className="title" data-aos="fade-right" data-aos-delay="900">
-            목적
-          </div>
-          {workList[pageName]?.purpose?.map((data, index) => (
-            <div
-              className="detail"
-              data-aos="fade-right"
-              data-aos-delay="900"
-              key={index}
-            >
-              {data}
+    <>
+      <PageTitle title={"작업물"} />
+      <Container>
+        <div className="contents">
+          <div className="wrap" data-aos="fade-up">
+            <div className="title" data-aos="fade-right" data-aos-delay="900">
+              제목
             </div>
-          ))}
-        </div>
-      </div>
-
-      <div className="contents">
-        <div className="wrap" data-aos="fade-up">
-          <div className="title" data-aos="fade-right" data-aos-delay="900">
-            사용법
-          </div>
-          {workList[pageName]?.use?.map((data, index) => (
-            <div
-              className="detail"
-              data-aos="fade-right"
-              data-aos-delay="900"
-              key={index}
-            >
-              {data}
+            <div className="detail" data-aos="fade-right" data-aos-delay="900">
+              {workList[pageName]?.title}
             </div>
-          ))}
-        </div>
-      </div>
-
-      <div className="contents">
-        <div className="wrap" data-aos="fade-up">
-          <div className="title" data-aos="fade-right" data-aos-delay="900">
-            사용스킬
           </div>
-          {workList[pageName]?.skill?.map((data, index) => (
-            <div
-              className="detail"
-              data-aos="fade-right"
-              data-aos-delay="900"
-              key={index}
-            >
-              {data}
+        </div>
+
+        <div className="contents">
+          <div className="wrap" data-aos="fade-up">
+            <div className="title" data-aos="fade-right" data-aos-delay="900">
+              바로가기
             </div>
-          ))}
-        </div>
-      </div>
-
-      <div className="contents">
-        <div className="wrap" data-aos="fade-up">
-          <div className="title" data-aos="fade-right" data-aos-delay="900">
-            느낀점
-          </div>
-          {workList[pageName]?.feel?.map((data, index) => (
-            <div
-              className="detail"
-              data-aos="fade-right"
-              data-aos-delay="900"
-              key={index}
-            >
-              {data}
+            <div className="detail" data-aos="fade-right" data-aos-delay="900">
+              <img src={workList[pageName]?.img} alt="detail_img" />
             </div>
-          ))}
-        </div>
-      </div>
-
-      <div className="contents">
-        <div className="wrap" data-aos="fade-up">
-          <div className="title" data-aos="fade-right" data-aos-delay="900">
-            어려웠던 점
-          </div>
-          {workList[pageName]?.difficult?.map((data, index) => (
-            <div
-              className="detail"
-              data-aos="fade-right"
-              data-aos-delay="900"
-              key={index}
-            >
-              {data}
+            <div className="detail" data-aos="fade-right" data-aos-delay="900">
+              <a
+                href={workList[pageName]?.url}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                주소: {workList[pageName]?.url}
+              </a>
             </div>
-          ))}
-        </div>
-      </div>
-
-      <div className="contents">
-        <div className="wrap" data-aos="fade-up">
-          <div className="title" data-aos="fade-right" data-aos-delay="900">
-            팁
           </div>
-          {workList[pageName]?.tip?.map((data, index) => (
-            <div
-              className="detail"
-              data-aos="fade-right"
-              data-aos-delay="900"
-              key={index}
-            >
-              {data}
+        </div>
+
+        <div className="contents">
+          <div className="wrap" data-aos="fade-up">
+            <div className="title" data-aos="fade-right" data-aos-delay="900">
+              목적
             </div>
-          ))}
-        </div>
-      </div>
-
-      <div className="contents">
-        <div className="wrap" data-aos="fade-up">
-          <div className="title" data-aos="fade-right" data-aos-delay="900">
-            깃허브 주소 및 구조도
-          </div>
-          <div className="detail" data-aos="fade-right" data-aos-delay="900">
-            <img src={workList[pageName]?.cons} alt="detail_img" />
-          </div>
-          <div className="detail" data-aos="fade-right" data-aos-delay="900">
-            <a
-              href={workList[pageName]?.github}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              주소: {workList[pageName]?.github}
-            </a>
+            {workList[pageName]?.purpose?.map((data, index) => (
+              <div
+                className="detail"
+                data-aos="fade-right"
+                data-aos-delay="900"
+                key={index}
+              >
+                {data}
+              </div>
+            ))}
           </div>
         </div>
-      </div>
 
-      <div className="back">
-        <Link to={"/work"}>
-          <FontAwesomeIcon icon={faArrowLeft} />
-          뒤로가기
-        </Link>
-      </div>
-    </Container>
+        <div className="contents">
+          <div className="wrap" data-aos="fade-up">
+            <div className="title" data-aos="fade-right" data-aos-delay="900">
+              사용법
+            </div>
+            {workList[pageName]?.use?.map((data, index) => (
+              <div
+                className="detail"
+                data-aos="fade-right"
+                data-aos-delay="900"
+                key={index}
+              >
+                {data}
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div className="contents">
+          <div className="wrap" data-aos="fade-up">
+            <div className="title" data-aos="fade-right" data-aos-delay="900">
+              사용스킬
+            </div>
+            {workList[pageName]?.skill?.map((data, index) => (
+              <div
+                className="detail"
+                data-aos="fade-right"
+                data-aos-delay="900"
+                key={index}
+              >
+                {data}
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div className="contents">
+          <div className="wrap" data-aos="fade-up">
+            <div className="title" data-aos="fade-right" data-aos-delay="900">
+              느낀점
+            </div>
+            {workList[pageName]?.feel?.map((data, index) => (
+              <div
+                className="detail"
+                data-aos="fade-right"
+                data-aos-delay="900"
+                key={index}
+              >
+                {data}
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div className="contents">
+          <div className="wrap" data-aos="fade-up">
+            <div className="title" data-aos="fade-right" data-aos-delay="900">
+              어려웠던 점
+            </div>
+            {workList[pageName]?.difficult?.map((data, index) => (
+              <div
+                className="detail"
+                data-aos="fade-right"
+                data-aos-delay="900"
+                key={index}
+              >
+                {data}
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div className="contents">
+          <div className="wrap" data-aos="fade-up">
+            <div className="title" data-aos="fade-right" data-aos-delay="900">
+              팁
+            </div>
+            {workList[pageName]?.tip?.map((data, index) => (
+              <div
+                className="detail"
+                data-aos="fade-right"
+                data-aos-delay="900"
+                key={index}
+              >
+                {data}
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div className="contents">
+          <div className="wrap" data-aos="fade-up">
+            <div className="title" data-aos="fade-right" data-aos-delay="900">
+              깃허브 주소 및 구조도
+            </div>
+            <div className="detail" data-aos="fade-right" data-aos-delay="900">
+              <img src={workList[pageName]?.cons} alt="detail_img" />
+            </div>
+            <div className="detail" data-aos="fade-right" data-aos-delay="900">
+              <a
+                href={workList[pageName]?.github}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                주소: {workList[pageName]?.github}
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div className="back">
+          <Link to={"/work"}>
+            <FontAwesomeIcon icon={faArrowLeft} />
+            뒤로가기
+          </Link>
+        </div>
+      </Container>
+    </>
   );
 };
 

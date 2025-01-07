@@ -7,6 +7,7 @@ import Aos from "aos";
 import StudyBox from "../components/StudyBox";
 import { useScrollTop } from "../lib/useScrollTop";
 import Loading from "../components/Loading";
+import PageTitle from "../components/PageTitle";
 
 const Container = styled.div`
   position: relative;
@@ -56,25 +57,28 @@ const Study = () => {
   useScrollTop();
 
   return (
-    <Container>
-      {res ? (
-        <>
-          <div className="text_wrap" data-aos="fade-up">
-            <StudyThree
-              wordList={res?.map((data) => data.name)}
-              to={res?.map((data) => data.url)}
-            />
-          </div>
-          <div className="git_wrap">
-            {res.map((data, index) => (
-              <StudyBox key={index} name={data.name} url={data.url} />
-            ))}
-          </div>
-        </>
-      ) : (
-        <Loading />
-      )}
-    </Container>
+    <>
+    <PageTitle title={"공부기록"}/>
+      <Container>
+        {res ? (
+          <>
+            <div className="text_wrap" data-aos="fade-up">
+              <StudyThree
+                wordList={res?.map((data) => data.name)}
+                to={res?.map((data) => data.url)}
+              />
+            </div>
+            <div className="git_wrap">
+              {res.map((data, index) => (
+                <StudyBox key={index} name={data.name} url={data.url} />
+              ))}
+            </div>
+          </>
+        ) : (
+          <Loading />
+        )}
+      </Container>
+    </>
   );
 };
 

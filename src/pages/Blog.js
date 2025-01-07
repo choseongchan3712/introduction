@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { blogData } from "../data/blogData";
 import BlogBox from "../components/BlogBox";
 import { useScrollTop } from "../lib/useScrollTop";
+import PageTitle from "../components/PageTitle";
 
 const Container = styled.div`
   position: relative;
@@ -26,18 +27,18 @@ const Container = styled.div`
 `;
 
 const Blog = () => {
-
-
-
   useScrollTop();
   return (
-    <Container>
-      <div className="wrap">
-        {blogData.map((data, index) => (
-          <BlogBox key={index} url={data.url} text={data.text} />
-        ))}
-      </div>
-    </Container>
+    <>
+      <PageTitle title={"블로그"} />
+      <Container>
+        <div className="wrap">
+          {blogData.map((data, index) => (
+            <BlogBox key={index} url={data.url} text={data.text} />
+          ))}
+        </div>
+      </Container>
+    </>
   );
 };
 

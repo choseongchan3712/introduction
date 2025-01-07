@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import PageWrap from "../components/PageWrap";
+import PageTitle from "../components/PageTitle";
 
 const Wrap = styled.div`
   width: 100%;
@@ -13,9 +14,12 @@ const Wrap = styled.div`
 
 const PageNotFound = () => {
   return (
-    <PageWrap>
-      <Wrap>404!</Wrap>
-    </PageWrap>
+    <>
+    <PageTitle title={"page_not_found"}/>
+      <PageWrap>
+        <Wrap>404!</Wrap>
+      </PageWrap>
+    </>
   );
 };
 

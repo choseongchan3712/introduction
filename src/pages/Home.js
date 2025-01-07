@@ -4,6 +4,7 @@ import Title from "../components/Title";
 import MenuList from "../components/MenuList";
 import { Link } from "react-router-dom";
 import MainThree from "../components/MainThree";
+import PageTitle from "../components/PageTitle";
 
 const Container = styled.div`
   width: 100%;
@@ -31,30 +32,33 @@ const Container = styled.div`
 
 const Home = () => {
   return (
-    <PageWrap>
-      <Container>
-        <div className="contents">
-          <Title />
-          <div className="menu">
-            <MenuList delay={"2s"}>
-              <Link to={"/work"}>작업물</Link>
-            </MenuList>
-            <MenuList delay={"3s"}>
-              <Link to={"/introduction"}>자기소개</Link>
-            </MenuList>
-            <MenuList delay={"4s"}>
-              <Link to={"/blog"}>블로그</Link>
-            </MenuList>
-            <MenuList delay={"5s"}>
-              <Link to={"/study"}>공부기록</Link>
-            </MenuList>
+    <>
+    <PageTitle title={"홈"}/>
+      <PageWrap>
+        <Container>
+          <div className="contents">
+            <Title />
+            <div className="menu">
+              <MenuList delay={"2s"}>
+                <Link to={"/work"}>작업물</Link>
+              </MenuList>
+              <MenuList delay={"3s"}>
+                <Link to={"/introduction"}>자기소개</Link>
+              </MenuList>
+              <MenuList delay={"4s"}>
+                <Link to={"/blog"}>블로그</Link>
+              </MenuList>
+              <MenuList delay={"5s"}>
+                <Link to={"/study"}>공부기록</Link>
+              </MenuList>
+            </div>
           </div>
-        </div>
-        <div className="three_wrap">
-          <MainThree />
-        </div>
-      </Container>
-    </PageWrap>
+          <div className="three_wrap">
+            <MainThree />
+          </div>
+        </Container>
+      </PageWrap>
+    </>
   );
 };
 
