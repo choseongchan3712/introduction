@@ -17,8 +17,15 @@ const Container = styled.div`
   padding: 100vh 15% 20px 15%;
   background-color: var(--main-color);
   overflow: hidden;
-  @media screen and (max-width: 1850px){
+  @media screen and (max-width: 1850px) {
     padding: 100vh 20px 20px 20px;
+  }
+  a {
+    color: var(--font-color);
+    transition: 0.25s ease-in-out;
+    &:hover {
+      color: var(--point-light);
+    }
   }
   .scroll_text {
     position: absolute;
@@ -237,6 +244,27 @@ const Container = styled.div`
       }
     }
     .military {
+      .bold_box {
+        width: 50%;
+        padding-left: 20px;
+      }
+      .bold_box:nth-child(1) {
+        border-right: 1px solid rgba(255, 255, 255, 0.5);
+      }
+      .re_box {
+        width: 50%;
+        padding-left: 20px;
+      }
+      .re_box:nth-child(1) {
+        border-right: 1px solid rgba(255, 255, 255, 0.5);
+      }
+    }
+    .address {
+      .title {
+        display: flex;
+        justify-content: flex-end;
+        text-align: right;
+      }
       .bold_box {
         width: 50%;
         padding-left: 20px;
@@ -562,6 +590,41 @@ const Introduction = () => {
               <div className="re_box">해군/병장/정보병과(중국어어학병)</div>
             </div>
           </div>
+        </div>
+
+        <div className="address contents">
+          <div className="detail_wrap" data-aos="fade-right">
+            <div className="line">
+              <div className="bold_box">깃허브</div>
+              <div className="bold_box">블로그</div>
+            </div>
+            <div className="line">
+              <div className="re_box">
+                <a
+                  href="https://github.com/choseongchan3712"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  https://github.com/choseongchan3712
+                </a>
+              </div>
+              <div className="re_box">
+                <a
+                  href="https://velog.io/@choseongchan3712/posts"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  https://velog.io/@choseongchan3712/posts
+                </a>
+              </div>
+            </div>
+          </div>
+          <Title>
+            깃허브 및<br />
+            블로그
+            <br />
+            주소
+          </Title>
         </div>
       </div>
     </Container>

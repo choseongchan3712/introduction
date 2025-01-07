@@ -4,6 +4,8 @@ import styled from "styled-components";
 import StudyThree from "../components/StudyThree";
 import "aos/dist/aos.css";
 import Aos from "aos";
+import StudyBox from "../components/StudyBox";
+import { useScrollTop } from "../lib/useScrollTop";
 
 const Container = styled.div`
   position: relative;
@@ -12,13 +14,16 @@ const Container = styled.div`
   min-height: 100vh;
   height: 100%;
   background-color: var(--main-color);
-  padding: 100vh 15% 20px 15%;
+  padding: 100vh 15% 200px 15%;
   .text_wrap {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100vh;
+  }
+  .git_wrap {
+    width: 100%;
   }
 `;
 
@@ -46,6 +51,7 @@ const Study = () => {
       offset: 300,
     });
   }, []);
+  useScrollTop();
 
   return (
     <Container>
@@ -58,6 +64,13 @@ const Study = () => {
         ) : (
           "loading"
         )}
+      </div>
+      <div className="git_wrap">
+        {res
+          ? res.map((data, index) => (
+              <StudyBox key={index} name={data.name} url={data.url} />
+            ))
+          : "loading"}
       </div>
     </Container>
   );

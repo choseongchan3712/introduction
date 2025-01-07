@@ -16,7 +16,7 @@ const Container = styled.div`
   top: 0;
   left: 0;
   background-color: var(--main-color);
-  padding: 120px 15% 20px 15%;
+  padding: 120px 15% 100px 15%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -28,7 +28,7 @@ const Container = styled.div`
     padding-bottom: 100px;
     color: var(--font-color);
     .wrap {
-      padding: 45px 20px 20px 20px;
+      padding: 45px 40px 20px 40px;
       background-color: var(--box-color);
       border-radius: 20px;
     }
